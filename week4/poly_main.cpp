@@ -35,7 +35,7 @@ int main() {
 	printf("\n");
 
 	addTerm(&B, 1, 1);
-	addTerm(&B, 1, -1);
+	addTerm(&B, 0, -1);
 	printPoly(B);
 	printf("\n");
 
