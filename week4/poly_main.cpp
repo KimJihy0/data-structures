@@ -35,7 +35,7 @@ int main() {
 	printf("\n");
 
 	addTerm(&B, 1, 1);
-	addTerm(&B, 0, -1);
+	addTerm(&B, 1, -1);
 	printPoly(B);
 	printf("\n");
 
@@ -121,6 +121,8 @@ void printPoly_impl(poly A, char* buffer) {
 	while (pTmpTerm != NULL) {
 		if (pTmpTerm->coeff == 0) {
 			pTmpTerm = pTmpTerm->next;
+			if (pTmpTerm == NULL)
+				strcat(buffer, "0");
 			continue;
 		}
 		else if (pTmpTerm->coeff > 0) {
