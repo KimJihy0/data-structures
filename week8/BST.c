@@ -5,7 +5,7 @@ typedef struct Node {
 	int data;
 	struct Node* leftChild;
 	struct Node* rightChild;
-};
+} Node;
 
 void insertTreeNode(Node** p, int value);
 void printTreePreorder(Node* pNode);
